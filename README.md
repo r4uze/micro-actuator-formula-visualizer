@@ -253,4 +253,4 @@ micro-actuator-formula-visualizer/
 
 欢迎贡献代码和提出建议。
 
-**作者：** 本项目由 **Toufik RADI** 创建，旨在帮助初学者入门 MEMS 微执行器。
+**作者：** 本项目由 **r4uze** 创建，旨在帮助初学者入门 MEMS 微执行器。
