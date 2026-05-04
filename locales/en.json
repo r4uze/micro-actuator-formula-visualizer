@@ -18,7 +18,12 @@
         "slider_w": "Width w  (μm)",
         "slider_t": "Thickness t  (μm)",
         "slider_E": "Young's Modulus E  (GPa)",
-        "slider_F": "Force F  (μN)"
+        "slider_F": "Force F  (μN)",
+        "range_L": "Range: 50 – 1000 μm",
+        "range_w": "Range: 5 – 200 μm",
+        "range_t": "Range: 1 – 50 μm",
+        "range_E": "Range: 1 – 250 GPa",
+        "range_F": "Range: 0.10 – 100.00 μN"
     },
     "results": {
         "title": "Results",

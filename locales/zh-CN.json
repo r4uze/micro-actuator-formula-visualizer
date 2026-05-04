@@ -18,7 +18,12 @@
         "slider_w": "梁宽度 w  (μm)",
         "slider_t": "梁厚度 t  (μm)",
         "slider_E": "杨氏模量 E  (GPa)",
-        "slider_F": "外力 F  (μN)"
+        "slider_F": "外力 F  (μN)",
+        "range_L": "范围：50 – 1000 μm",
+        "range_w": "范围：5 – 200 μm",
+        "range_t": "范围：1 – 50 μm",
+        "range_E": "范围：1 – 250 GPa",
+        "range_F": "范围：0.10 – 100.00 μN"
     },
     "results": {
         "title": "计算结果",

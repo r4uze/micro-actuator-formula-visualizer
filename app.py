@@ -61,6 +61,13 @@ st.set_page_config(
 # ---------- Custom CSS ----------
 st.markdown("""
 <style>
+    /* --- Force light theme everywhere (mobile dark mode fix) --- */
+    html, body, .stApp {
+        color-scheme: light !important;
+        background-color: #F8FAFC !important;
+        color: #0F172A !important;
+    }
+
     /* --- Page background --- */
     .stApp {
         background-color: #f8fafc;
@@ -70,6 +77,21 @@ st.markdown("""
     .block-container {
         padding-top: 1.5rem !important;
         padding-bottom: 2rem !important;
+        max-width: 100% !important;
+    }
+
+    /* --- Mobile responsive --- */
+    @media (max-width: 768px) {
+        .block-container {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
+        .stApp h1 {
+            font-size: 1.35rem !important;
+        }
+        .stApp h3 {
+            font-size: 1rem !important;
+        }
     }
 
     /* --- Title --- */
@@ -162,16 +184,29 @@ st.markdown("""
 
     /* --- Sidebar --- */
     [data-testid="stSidebar"] {
-        background-color: #f1f5f9;
+        background-color: #EEF2F7 !important;
+        color-scheme: light !important;
     }
     [data-testid="stSidebar"] .block-container {
         padding-top: 2rem !important;
     }
 
-    /* --- Slider labels --- */
-    [data-testid="stSidebar"] .stSlider label {
-        font-size: 0.85rem !important;
-        color: #334155 !important;
+    /* --- Sidebar labels --- */
+    [data-testid="stSidebar"] label {
+        color: #0F172A !important;
+    }
+    [data-testid="stSidebar"] .stCaption {
+        color: #64748b !important;
+    }
+
+    /* --- Input fields (white bg, dark text — never inverted) --- */
+    input, textarea, [data-baseweb="input"] {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        -webkit-text-fill-color: #0F172A !important;
+    }
+    input::placeholder {
+        color: #94a3b8 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -269,24 +304,28 @@ with st.sidebar:
         step=1,
         key="param_L",
     )
+    st.caption(t("sidebar.range_L"))
 
     st.number_input(
         t("sidebar.slider_w"),
         step=1,
         key="param_w",
     )
+    st.caption(t("sidebar.range_w"))
 
     st.number_input(
         t("sidebar.slider_t"),
         step=1,
         key="param_t",
     )
+    st.caption(t("sidebar.range_t"))
 
     st.number_input(
         t("sidebar.slider_E"),
         step=1,
         key="param_E",
     )
+    st.caption(t("sidebar.range_E"))
 
     st.number_input(
         t("sidebar.slider_F"),
@@ -294,6 +333,7 @@ with st.sidebar:
         format="%.2f",
         key="param_F",
     )
+    st.caption(t("sidebar.range_F"))
 
 # Read current values from session state
 L = st.session_state["param_L"]
