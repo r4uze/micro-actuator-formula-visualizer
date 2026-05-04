@@ -1,0 +1,70 @@
+{
+    "app": {
+        "title": "Micro-Actuator Formula Visualizer",
+        "caption": "Micro-Actuator Formula Visualizer"
+    },
+    "intro": "This app helps **beginners** understand the basic formula behind **cantilever beam tip deflection** — a fundamental concept in **MEMS (Micro-Electro-Mechanical Systems)** and micro-actuator design.",
+    "schematic": {
+        "title": "Cantilever Beam Model",
+        "fixed_end": "Fixed end",
+        "free_end": "Free end",
+        "force_label": "F",
+        "length_label": "L  (beam length)",
+        "caption": "The beam is **clamped on the left** (no movement, no rotation) and **free on the right**, where the force is applied."
+    },
+    "sidebar": {
+        "title": "Input Parameters",
+        "slider_L": "Length L  (μm)",
+        "slider_w": "Width w  (μm)",
+        "slider_t": "Thickness t  (μm)",
+        "slider_E": "Young's Modulus E  (GPa)",
+        "slider_F": "Force F  (μN)"
+    },
+    "results": {
+        "title": "Results",
+        "applied_force": "Applied Force",
+        "beam_length": "Beam Length",
+        "tip_deflection": "Tip Deflection  δ",
+        "moment_of_inertia": "Moment of Inertia  I"
+    },
+    "si_note": "All calculations are performed internally using **SI units** (m, Pa, N). Slider inputs in μm, GPa, and μN are converted automatically.",
+    "formula": {
+        "title": "Formula Explanation",
+        "symbol_header": "Symbol",
+        "meaning_header": "Meaning",
+        "unit_header": "Unit",
+        "symbol_delta": "Tip deflection",
+        "symbol_F": "Applied force",
+        "symbol_L": "Beam length",
+        "symbol_w": "Beam width",
+        "symbol_t": "Beam thickness",
+        "symbol_E": "Young's modulus",
+        "symbol_I": "Moment of inertia"
+    },
+    "assumptions": {
+        "title": "Model Assumptions",
+        "rectangular": "**Rectangular cross-section** — the beam has a uniform rectangular profile.",
+        "small_deformation": "**Small deformation** — deflection is small relative to beam length.",
+        "linear_elastic": "**Linear elastic behavior** — material obeys Hooke's law, no plastic deformation."
+    },
+    "chart": {
+        "title": "Effect of Applied Force on Cantilever Tip Deflection",
+        "x_axis": "Force (μN)",
+        "y_axis": "Tip Deflection (μm)",
+        "caption": "The deflection increases **linearly** with force — double the force means double the deflection (for a given beam geometry)."
+    },
+    "limitations": {
+        "title": "Limitations",
+        "no_nonlinear": "**No nonlinear deformation** — the model does not account for large-deflection (geometric nonlinearity) effects.",
+        "no_damping": "**No damping** — the model is purely static; it does not include viscous or structural damping.",
+        "no_dynamic": "**No dynamic response** — the model does not simulate vibration, resonance, or time-dependent loading."
+    },
+    "fem_disclaimer": "**This is a simplified educational model, not a replacement for Finite Element Method (FEM) simulation.**",
+    "validation": {
+        "range_L": "Length L must be between 50 and 1000 μm.",
+        "range_w": "Width w must be between 5 and 200 μm.",
+        "range_t": "Thickness t must be between 1 and 50 μm.",
+        "range_E": "Young's Modulus E must be between 1 and 250 GPa.",
+        "range_F": "Force F must be between 0.10 and 100.00 μN."
+    }
+}

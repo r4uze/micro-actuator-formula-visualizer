@@ -1,0 +1,70 @@
+{
+    "app": {
+        "title": "微执行器公式可视化工具",
+        "caption": "微执行器公式可视化工具"
+    },
+    "intro": "本应用帮助 **初学者** 理解 **悬臂梁尖端挠度** 的基本公式，这是 **MEMS（微机电系统）** 和微执行器设计中的一个基础概念。",
+    "schematic": {
+        "title": "悬臂梁模型",
+        "fixed_end": "固定端",
+        "free_end": "自由端",
+        "force_label": "施加力 F",
+        "length_label": "梁长度 L",
+        "caption": "梁在 **左端固定**（无位移、无旋转），**右端自由**，外力施加在自由端。"
+    },
+    "sidebar": {
+        "title": "输入参数",
+        "slider_L": "梁长度 L  (μm)",
+        "slider_w": "梁宽度 w  (μm)",
+        "slider_t": "梁厚度 t  (μm)",
+        "slider_E": "杨氏模量 E  (GPa)",
+        "slider_F": "外力 F  (μN)"
+    },
+    "results": {
+        "title": "计算结果",
+        "applied_force": "施加力",
+        "beam_length": "梁长度",
+        "tip_deflection": "末端位移  δ",
+        "moment_of_inertia": "截面二次矩  I"
+    },
+    "si_note": "所有计算均使用 **国际单位制 (SI)**（m, Pa, N）在内部完成，滑块输入的 μm、GPa、μN 会自动转换。",
+    "formula": {
+        "title": "公式说明",
+        "symbol_header": "符号",
+        "meaning_header": "含义",
+        "unit_header": "单位",
+        "symbol_delta": "尖端挠度",
+        "symbol_F": "施加力",
+        "symbol_L": "梁长度",
+        "symbol_w": "梁宽度",
+        "symbol_t": "梁厚度",
+        "symbol_E": "杨氏模量",
+        "symbol_I": "截面二次矩"
+    },
+    "assumptions": {
+        "title": "模型假设",
+        "rectangular": "**矩形截面** —— 梁具有均匀矩形轮廓。",
+        "small_deformation": "**小变形** —— 挠度相对于梁长度很小。",
+        "linear_elastic": "**线弹性行为** —— 材料遵循胡克定律，无塑性变形。"
+    },
+    "chart": {
+        "title": "施加力对悬臂梁末端位移的影响",
+        "x_axis": "施加力 (μN)",
+        "y_axis": "末端位移 (μm)",
+        "caption": "位移随力 **线性** 增加——在相同梁几何参数下，力加倍，位移也加倍。"
+    },
+    "limitations": {
+        "title": "模型局限性",
+        "no_nonlinear": "**无非线性变形** —— 模型未考虑大挠度（几何非线性）效应。",
+        "no_damping": "**无阻尼** —— 模型为纯静态，不包含粘性阻尼或结构阻尼。",
+        "no_dynamic": "**无动态响应** —— 模型不模拟振动、谐振或随时间变化的载荷。"
+    },
+    "fem_disclaimer": "**这是一个用于教学的简化模型，不能替代有限元仿真。**",
+    "validation": {
+        "range_L": "梁长度 L 必须在 50 到 1000 μm 之间。",
+        "range_w": "梁宽度 w 必须在 5 到 200 μm 之间。",
+        "range_t": "梁厚度 t 必须在 1 到 50 μm 之间。",
+        "range_E": "杨氏模量 E 必须在 1 到 250 GPa 之间。",
+        "range_F": "外力 F 必须在 0.10 到 100.00 μN 之间。"
+    }
+}
